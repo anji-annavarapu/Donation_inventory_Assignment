@@ -1,5 +1,14 @@
 import java.time.LocalDate;
-
+/**
+ * Represents a donation made to the shelter.
+ *
+ * <p>This POJO class holds information about a single donation,
+ * including the donor's name, the type of item donated, the quantity,
+ * and the date of donation.
+ *
+ * <p>Used for storing donation records, generating reports,
+ * and managing inventory.
+ */
 public class Donation {
     private String donar_name;
     private String type_donation;

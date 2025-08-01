@@ -1,5 +1,13 @@
 import java.time.LocalDate;
-
+/**
+ * Represents a distribution of donation.
+ *
+ * <p>This POJO class holds information about a single distribution,
+ * including the type of item donated, the quantity,
+ * and the date of donation.
+ *
+ * <p>Used for storing distribution records, generating reports.
+ */
 public class Distribution {
     private String type;
     private Integer quantity;

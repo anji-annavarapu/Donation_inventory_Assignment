@@ -1,15 +1,21 @@
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
-
+/*
+    This is Donation_manager class holds functionalites
+    inventory manager
+ */
 public class Donation_manager {
     List<Donation> donations=new ArrayList<>();
     List<Distribution> donatedList=new ArrayList<>();
 
+    // registered the donation in memory
     public void registereDonation(String donor_name, String type, Integer quantity, LocalDate date){
         donations.add(new Donation(donor_name, type, quantity, date));
         System.out.println("Donation registered succesfully ");
     }
+
+    // store the distributed data in the memory by storing its type, quantity and date
     public void distributeDonation(String type,LocalDate date,Integer quantity){
         donatedList.add(new Distribution(type,date,quantity));
         System.out.println(type.toUpperCase()+" distribute and logged succesfully");
@@ -41,7 +47,7 @@ public class Donation_manager {
             System.out.printf("%s: %d units donated\n", donor, donorsums.getOrDefault(donor,0));
         }
     }
-
+    // Enables filtering and viewing of distributed items by date
     public void searchDistributionByDate(String dateString) {
         LocalDate date = LocalDate.parse(dateString);
         List<Distribution> result = donatedList.stream()
